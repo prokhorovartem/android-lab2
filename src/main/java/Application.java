@@ -9,6 +9,7 @@ public class Application {
         doFourthTask();
         doFifthTask();
         doSixthTask();
+        doSeventhTask();
     }
 
     private static void doFirstTask() {
@@ -116,5 +117,16 @@ public class Application {
         }
         Arrays.sort(array);
         System.out.println(Arrays.toString(array));
+    }
+
+    private static void doSeventhTask() {
+        int[] array = {1, 2, 3, 4, 5, 6};
+        try {
+            System.out.println(array[7]);
+        } catch (ArrayIndexOutOfBoundsException ex) {
+            System.out.println("Возникло исключение:");
+            System.out.println(ex);
+        }
+
     }
 }
