@@ -1,4 +1,5 @@
 import ninth.Student;
+import tenth.*;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -14,6 +15,7 @@ public class Application {
         doSeventhTask();
         doEighthTask();
         doNinthTask();
+        doTenthTask();
     }
 
     private static void doFirstTask() {
@@ -139,5 +141,18 @@ public class Application {
 
     private static void doNinthTask() {
         Student student = new Student();
+    }
+
+    private static void doTenthTask() {
+        MoneyConvertor moneyConvertor = new MoneyConvertor();
+        Euro euro = new Euro(70.1);
+        Dollar dollar = new Dollar(64.8);
+        Yuan yuan = new Yuan(8.98);
+        Ruble euroToRuble = moneyConvertor.convertToRubli(euro);
+        Ruble dollarToRuble = moneyConvertor.convertToRubli(dollar);
+        Ruble yuanToRuble = moneyConvertor.convertToRubli(yuan);
+        System.out.println("Курс евро: " + euroToRuble.getValue());
+        System.out.println("Курс доллара: " + dollarToRuble.getValue());
+        System.out.println("Курс юаня: " + yuanToRuble.getValue());
     }
 }
