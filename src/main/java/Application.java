@@ -1,3 +1,5 @@
+import ninth.Student;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -11,6 +13,7 @@ public class Application {
         doSixthTask();
         doSeventhTask();
         doEighthTask();
+        doNinthTask();
     }
 
     private static void doFirstTask() {
@@ -132,5 +135,9 @@ public class Application {
         AirBusA320 airBusA320 = new AirBusA320();
         AirBusA380 airBusA380 = new AirBusA380();
         airBusA380.setSpeed(900);
+    }
+
+    private static void doNinthTask() {
+        Student student = new Student();
     }
 }
