@@ -1,7 +1,4 @@
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Application {
@@ -11,6 +8,7 @@ public class Application {
         doThirdTask();
         doFourthTask();
         doFifthTask();
+        doSixthTask();
     }
 
     private static void doFirstTask() {
@@ -108,5 +106,15 @@ public class Application {
             default:
                 System.out.println("Оценка 2");
         }
+    }
+
+    private static void doSixthTask() {
+        Scanner sc = new Scanner(System.in);
+        int[] array = new int[15];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = sc.nextInt();
+        }
+        Arrays.sort(array);
+        System.out.println(Arrays.toString(array));
     }
 }
