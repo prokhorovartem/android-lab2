@@ -10,6 +10,7 @@ public class Application {
         doFifthTask();
         doSixthTask();
         doSeventhTask();
+        doEighthTask();
     }
 
     private static void doFirstTask() {
@@ -65,7 +66,6 @@ public class Application {
                 }
             });
         }
-
     }
 
     private static void doFourthTask() {
@@ -124,9 +124,13 @@ public class Application {
         try {
             System.out.println(array[7]);
         } catch (ArrayIndexOutOfBoundsException ex) {
-            System.out.println("Возникло исключение:");
-            System.out.println(ex);
+            System.out.println("Возникло исключение: " + ex);
         }
+    }
 
+    private static void doEighthTask() {
+        AirBusA320 airBusA320 = new AirBusA320();
+        AirBusA380 airBusA380 = new AirBusA380();
+        airBusA380.setSpeed(900);
     }
 }
