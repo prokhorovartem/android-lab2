@@ -10,6 +10,7 @@ public class Application {
         doSecondTask();
         doThirdTask();
         doFourthTask();
+        doFifthTask();
     }
 
     private static void doFirstTask() {
@@ -84,6 +85,28 @@ public class Application {
             System.out.println("Оценка 3");
         } else {
             System.out.println("Оценка 2");
+        }
+    }
+
+    private static void doFifthTask() {
+        System.out.println("Если студент получил 0-60 баллов – то оценка 2.\n" +
+                "Если студент получил 60-74 баллов – то оценка 3.\n" +
+                "Если студент получил 75-90 баллов – то оценка 4.\n" +
+                "Если студент получил 91-100 баллов – то оценка 5.");
+        System.out.println("Пожалуйста, введите количество баллов:");
+        Scanner sc = new Scanner(System.in);
+        int grade = sc.nextInt();
+        switch (grade) {
+            case 91:
+                System.out.println("Оценка 5");
+                break;
+            case 75:
+                System.out.println("Оценка 4");
+                break;
+            case 61:
+                System.out.println("Оценка 3");
+            default:
+                System.out.println("Оценка 2");
         }
     }
 }
